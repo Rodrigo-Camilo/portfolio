@@ -6,7 +6,7 @@
 
 Portfólio profissional onde apresento minha experiência, projetos e tecnologias utilizadas no desenvolvimento de aplicações web e mobile.
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-Online-111111?style=for-the-badge&logo=vercel&logoColor=white)](#)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Online-111111?style=for-the-badge&logo=vercel&logoColor=white)](https://rodrigocamilo.vercel.app/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Rodrigo%20Camilo-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rodrigocpaixao)
 [![GitHub](https://img.shields.io/badge/GitHub-Rodrigo--Camilo-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Rodrigo-Camilo)
 
@@ -26,7 +26,7 @@ A aplicação foi construída com foco em:
 - animações leves;
 - organização e reutilização de componentes;
 - SEO e compartilhamento;
-- demonstrações dos projetos em vídeo.
+- demonstrações em vídeo com streaming adaptativo.
 
 ---
 
@@ -112,6 +112,7 @@ Principais tecnologias utilizadas neste portfólio:
 - **JavaScript**
 - **CSS Modules**
 - **Canvas API**
+- **Mux Player**
 - **ESLint**
 
 As tecnologias específicas utilizadas em cada produto são apresentadas individualmente dentro do portfólio.
@@ -120,7 +121,7 @@ As tecnologias específicas utilizadas em cada produto são apresentadas individ
 
 ## Destaques técnicos
 
-O projeto utiliza alguns recursos para melhorar experiência, acessibilidade e performance:
+O projeto utiliza recursos para melhorar experiência, acessibilidade e performance:
 
 - App Router do Next.js;
 - Server Components por padrão;
@@ -132,6 +133,7 @@ O projeto utiliza alguns recursos para melhorar experiência, acessibilidade e p
 - animação de código com efeito de digitação;
 - conteúdo centralizado em uma camada de dados;
 - metadados para SEO e compartilhamento;
+- vídeos entregues pelo Mux com streaming adaptativo HLS;
 - suporte a telas a partir de 320px;
 - tratamento de safe areas em dispositivos móveis.
 
@@ -175,7 +177,6 @@ portfolio/
 - Node.js 20.9+
 - npm
 - Git
-- Git LFS
 
 Clone o repositório:
 
@@ -183,22 +184,10 @@ Clone o repositório:
 git clone https://github.com/Rodrigo-Camilo/portfolio.git
 ```
 
-Entre na pasta:
+Entre na pasta e instale as dependências:
 
 ```bash
 cd portfolio
-```
-
-Instale o Git LFS:
-
-```bash
-git lfs install
-git lfs pull
-```
-
-Instale as dependências:
-
-```bash
 npm install
 ```
 
@@ -208,11 +197,7 @@ Execute o projeto:
 npm run dev
 ```
 
-A aplicação ficará disponível em:
-
-```text
-http://localhost:3000
-```
+A aplicação ficará disponível em [http://localhost:3000](http://localhost:3000).
 
 ---
 
@@ -227,17 +212,9 @@ http://localhost:3000
 
 ---
 
-## Arquivos de mídia
+## Streaming de vídeo
 
-As demonstrações em vídeo dos projetos são armazenadas utilizando **Git LFS**.
-
-Após clonar o repositório, execute:
-
-```bash
-git lfs pull
-```
-
-para baixar os arquivos de mídia completos.
+As demonstrações dos projetos são entregues pelo **Mux Player** em streaming adaptativo. O navegador recebe automaticamente a resolução mais adequada para o dispositivo e para a conexão, sem incluir arquivos de vídeo pesados no repositório ou no deploy da aplicação.
 
 ---
 

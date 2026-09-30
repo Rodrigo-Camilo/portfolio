@@ -3,13 +3,14 @@
 import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 
+import { ProjectVideoPlayer } from "./project-video-player";
 import styles from "./project-gallery.module.css";
 
 function getPreferredDevice(project, demo) {
   const preferredDevice = demo.defaultDevice ?? project.defaultDevice ?? "desktop";
 
-  if (demo.sources[preferredDevice]) return preferredDevice;
-  if (demo.sources.desktop) return "desktop";
+  if (demo.playbackIds[preferredDevice]) return preferredDevice;
+  if (demo.playbackIds.desktop) return "desktop";
   return "mobile";
 }
 
@@ -24,9 +25,9 @@ export function ProjectGallery({ projects }) {
     ? activeProject.demos.find((demo) => demo.id === activeDemoId) ?? activeProject.demos[0]
     : null;
   const availableDevices = activeProject && activeDemo
-    ? activeProject.devices.filter((item) => Boolean(activeDemo.sources[item.id]))
+    ? activeProject.devices.filter((item) => Boolean(activeDemo.playbackIds[item.id]))
     : [];
-  const activeDevice = activeDemo?.sources[device] ? device : availableDevices[0]?.id;
+  const activeDevice = activeDemo?.playbackIds[device] ? device : availableDevices[0]?.id;
   const supportsDeviceSwitch = availableDevices.length > 1;
 
   const closeProject = useCallback(() => {
@@ -90,14 +91,7 @@ export function ProjectGallery({ projects }) {
                   sizes="(max-width: 620px) calc(100vw - 32px), (max-width: 920px) 50vw, 33vw"
                 />
               ) : (
-                <video
-                  src={`${previewDemo.sources[previewDevice]}#t=0.1`}
-                  muted
-                  playsInline
-                  preload="metadata"
-                  aria-hidden="true"
-                  tabIndex="-1"
-                />
+                <span className={styles.previewFallback}>{project.name}</span>
               )}
               <span className={styles.previewShade} aria-hidden="true" />
               <span className={styles.previewIndex}>{project.number}</span>
@@ -216,17 +210,12 @@ export function ProjectGallery({ projects }) {
                 </div>
 
                 <div className={`${styles.videoStage} ${activeDevice === "mobile" ? styles.mobileStage : ""}`}>
-                  <video
+                  <ProjectVideoPlayer
                     key={`${activeDemo.id}-${activeDevice}`}
                     className={activeDevice === "mobile" ? styles.mobileVideo : styles.desktopVideo}
-                    src={activeDemo.sources[activeDevice]}
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    controls
-                    preload="metadata"
-                    aria-label={`${activeDemo.title} — visualização ${activeDevice}`}
+                    playbackId={activeDemo.playbackIds[activeDevice]}
+                    title={`${activeDemo.title} — visualização ${activeDevice}`}
+                    videoId={`${activeProject.slug}-${activeDemo.id}-${activeDevice}`}
                   />
                 </div>
 

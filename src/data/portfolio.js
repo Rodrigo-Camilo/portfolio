@@ -28,9 +28,9 @@ export const hubbiiCaseStudy = {
       title: "Home, busca e descoberta local",
       description:
         "Entrada da experiência pública com categorias, campanhas, estabelecimentos e conteúdo adaptados para diferentes tamanhos de tela.",
-      sources: {
-        desktop: "/projects/hubbii/desktop/home-page.mp4",
-        mobile: "/projects/hubbii/mobile/home-page.mp4",
+      playbackIds: {
+        desktop: "iN4z8VEl92ZEKYq2t5z02i00R02MLTRxFbFmQFKxZBN9aE",
+        mobile: "5Y45TN83oiJ7K7I6900ExzOALcvX7XBVTe99Khl102BYA",
       },
     },
     {
@@ -41,7 +41,7 @@ export const hubbiiCaseStudy = {
       title: "Painel administrativo",
       description:
         "Visão central para acompanhar parceiros, usuários, estabelecimentos, campanhas, conteúdo e indicadores da plataforma.",
-      sources: { desktop: "/projects/hubbii/desktop/admin-page.mp4" },
+      playbackIds: { desktop: "a02UPcDCk7ja8jP2ctqlhMvEFm7brY8rluvP9c4xd7fM" },
     },
     {
       id: "partner",
@@ -51,7 +51,7 @@ export const hubbiiCaseStudy = {
       title: "Painel do parceiro",
       description:
         "Área operacional com indicadores de desempenho e gestão de informações da página do estabelecimento, cardápio, pedidos, agenda, eventos e conteúdo.",
-      sources: { desktop: "/projects/hubbii/desktop/partner-page.mp4" },
+      playbackIds: { desktop: "yZErqoYOkHNE2yHHyWMswxsm51IVxiisn8Cm3Kxyoz8" },
     },
     {
       id: "plans",
@@ -61,7 +61,7 @@ export const hubbiiCaseStudy = {
       title: "Planos para estabelecimentos",
       description:
         "Apresentação dos recursos disponíveis para parceiros e dos caminhos de entrada no ecossistema da Hubbii.",
-      sources: { desktop: "/projects/hubbii/desktop/plans-page.mp4" },
+      playbackIds: { desktop: "QlHtVdQHyW01JQJnfEkQeaETryr2S00n2iKoTBMlVhJug" },
     },
   ],
   highlights: [
@@ -123,9 +123,9 @@ export const ayraCaseStudy = {
       description:
         "Fluxo direto para informar endereços, escolher entrega imediata ou agendada, comparar veículos, receber a cotação e avançar ao pagamento.",
       defaultDevice: "mobile",
-      sources: {
-        desktop: "/projects/ayra/desktop/home-page.mp4",
-        mobile: "/projects/ayra/mobile/home-page.mp4",
+      playbackIds: {
+        desktop: "bk1msYvQ2XcYDTHT27LTimRT6moH01mIdTV01sWq9tYiw",
+        mobile: "geayTCtjvAIxdaM8RlvTsBTd7N02bXYArGzbT8xE799A",
       },
     },
     {
@@ -137,7 +137,7 @@ export const ayraCaseStudy = {
       description:
         "Área para aceitar corridas, acompanhar entregas em andamento, atualizar etapas, consultar histórico, ganhos e repasses.",
       defaultDevice: "mobile",
-      sources: { mobile: "/projects/ayra/mobile/driver-page.mp4" },
+      playbackIds: { mobile: "z9DoShx01MhkW4AWHpwWBv5GzT00L12UY02PiyDzHSSpnM" },
     },
     {
       id: "admin",
@@ -147,7 +147,7 @@ export const ayraCaseStudy = {
       title: "Painel administrativo",
       description:
         "Visão das corridas, parceiros, cadastros, documentos, pagamentos, repasses e indicadores operacionais e financeiros.",
-      sources: { desktop: "/projects/ayra/desktop/admin-page.mp4" },
+      playbackIds: { desktop: "ajXD00P00oSEE3rLiww4B5I7eTbJ8vQfnnQfht017Kckxc" },
     },
   ],
   highlights: [
@@ -204,7 +204,7 @@ export const supplyDeskCaseStudy = {
       title: "Gestão comercial em uma única visão",
       description:
         "Dashboard com fornecedores, catálogo, comparação de ofertas, pedidos, comissões, indicadores, gráficos e histórico de alterações.",
-      sources: { desktop: "/projects/supplydesk/desktop/painel.mp4" },
+      playbackIds: { desktop: "R7GK6KB8tzbiwykumI3v02hyxc6RG46k67Ilu8eqr7so" },
     },
   ],
   highlights: [
